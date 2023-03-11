@@ -22,6 +22,18 @@ const About = () => {
             },
         },
     };
+    const section2Variants = {
+        hidden: { x: 50, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 200,
+                damping: 20,
+            },
+        },
+    };
     return (
 
         <div className='about' id='MyIntro'>
@@ -33,7 +45,11 @@ const About = () => {
                     <img src={ImageBoard} alt="" />
                     <img className='bgimg' src={ImageBd} alt="" />
                 </motion.div>
-                <div className="desc">
+                <motion.div ref={ref}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    variants={section2Variants}
+                             className="desc">
                     <h5>My Intro</h5>
                     <h1>About Me</h1>
                     <p>Hi there! My name is Adegoke Stephen Busayo and I'm a passionate front-end web developer. I love creating beautiful and functional user interfaces that enhance the overall user experience. I have experience working with HTML, CSS, JavaScript, and various front-end frameworks like React . When I'm not coding, you can find me exploring the outdoors, practicing football. I'm always looking for new challenges and opportunities to learn and grow as a developer..</p>
@@ -56,10 +72,10 @@ const About = () => {
                         <div className="music">  <img src={alien} alt="" /> <small>Sci-Fi</small> </div>
                         <div className="music">  <img src={ball} alt="" /> <small>Football</small> </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )
 }
 
-export default About
+export default About;
