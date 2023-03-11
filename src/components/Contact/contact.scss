@@ -1,0 +1,154 @@
+$primaryColor: #1976D2;
+$thickColor: #052545;
+h1,h2,h3,h5,p,div{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.contactform{
+    width: 100%;
+    height: max-content;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    .bg{
+        background-image: url('../../assets//backgroundcontact.png');
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        opacity: .3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .formcontainer{
+        position: relative;
+            z-index: 100;
+            display: flex;
+            width: 80%;
+            gap: 4rem;
+            @media screen and (max-width:710px) {
+                justify-content: center;
+                align-items: center;
+                
+                            }
+        .left{
+            width: 65%;
+            height: 100%;
+            @media screen and (max-width:710px) {
+                display: none;
+                            }
+            form{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+              
+                input{
+                    padding: 1rem;
+                    width: 95%;
+                    border: solid 1px rgb(184, 179, 179);
+                    border-radius: 5px;
+                    // outline: solid 1px green;
+                    transition:  all ease-in-out .4s;
+                    color: rgb(41, 40, 40);
+                    font-weight: 300;
+                    &:focus{
+                       
+                         outline: solid 1px $primaryColor;
+                       
+                    }
+                }
+                .top{
+                    display: flex;
+                    gap: 20px;
+                    input{
+                        &:nth-child(1){
+                            width: 42%;
+                        }
+                        &:nth-child(2){
+                            width: 55%;
+                        }
+                    }
+                   
+                }
+               textarea{
+                padding: 2rem;
+                border: solid 1px rgb(184, 179, 179);
+                &:focus{
+                       
+                    outline: solid 1px $primaryColor;
+                  
+               }
+               
+               }
+               button{
+                width: max-content;
+                padding: 1rem;
+                background-color: $primaryColor;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                font-weight: bold;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2rem;
+               }
+            }
+
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            @media screen and (max-width:710px) {
+              width: 100%;
+                            }
+            .tel{
+                display: flex;
+                width: 100%;
+           color: rgb(74, 74, 74);
+           @media screen and (max-width:710px) {
+            width: 100%;
+            box-shadow: 0 0 15px rgba(82, 89, 182, 0.501);
+     padding: 1rem 0 ;
+                          }
+           
+                .icon{
+                   
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: $primaryColor;
+                    color: white;
+                    margin-right: 1rem;
+                    margin-left: .4rem;
+                }
+                .cont{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                h3{
+                    font-size: 15px;
+                    margin-bottom: .3rem;
+                    font-weight: 500;
+                }
+                p{
+                    font-size: 13px;
+                    font-weight: 300;
+                    line-height: 1.2;
+                    letter-spacing: 1px;
+                }
+
+                }
+            }
+        }
+    }
+   
+}
