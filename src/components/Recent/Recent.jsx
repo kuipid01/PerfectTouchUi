@@ -59,13 +59,12 @@ const Recent = () => {
     fetchData();
 
   }, []);
-  console.log(project);
+
 
   const catgories = [
     'all', 'web-design', 'graphics-design']
 
   const filterdarray = project.filter((web) => web.category === `${displayed}`)
-  console.log(displayed);
 
   return (
 

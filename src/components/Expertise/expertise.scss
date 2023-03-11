@@ -18,7 +18,7 @@ h1,h2,h3,h5,p,div,span{
               
        }
     .wrapper{
-        width: 60%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -37,33 +37,21 @@ h1,h2,h3,h5,p,div,span{
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-         
+         gap: 2rem;
             justify-content: center;
             align-items: center;
-            .fbmarketing{
-                width: 43%;
+            .imgcont{
+                width: max-content;
                 height: max-content;
-                margin-bottom: 2rem;
-                margin-right: 30px;
-                @media screen and (max-width:550px) {
-                    width: 80%;
-                              
-                       }
-                .top{
-                    display: flex;
-                    font-weight: 900;
-                    color: $thickColor;
-                    font-size:12px ;
-                    justify-content: space-between;
-                }
-                .bottom{
-                    width: 100%;
-                    margin-top: 4px;
-                    border-radius: 100px;
-                    height: 10px;
-                    border: solid 1px $primaryColor ;
+                cursor: pointer;
+                img{
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    background-color: rebeccapurple;
                 }
             }
+         
         }
     }
 }

@@ -108,9 +108,9 @@ align-items: center;
             }
     img.rot{
         width: 80%;
-        height: 78%;
+        height: 100%;
         position: absolute;
-        bottom: 7%;
+        bottom: -10%;
         left: 10%;
         transform: rotate(12deg);
         object-fit: cover;

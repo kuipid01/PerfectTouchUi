@@ -8,7 +8,7 @@ const Home = () => {
             <div className="left">
                 <h5>Hi,I am</h5>
                 <h1>Adegoke Stephen</h1> 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora similique eum reiciendis fugiat in sapiente quam quasi, eaque totam omnis?</p>
+                <p>Specialize in providing creative and engaging web design services that help your brand stand out online.</p>
            <div className="btns">
            <button className=' focus'>Download CV</button>
             <button>Contact Me</button>

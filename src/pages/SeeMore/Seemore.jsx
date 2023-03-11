@@ -61,7 +61,7 @@ const Seemore = () => {
     fetchData();
   
   }, []);
-  console.log(project);
+
   return (
     <div className='seemore'>
         <div className="wrapper">
