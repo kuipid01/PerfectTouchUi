@@ -9,6 +9,7 @@ import { getStorage, ref } from "firebase/storage";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+export const app = initializeApp(firebaseConfig);
 const firebaseConfig = {
   apiKey: "AIzaSyA2Ymq5-RNWBgpgDuR-IPnE2rNm_HPu7-o",
   authDomain: "newportfolio-b3f2d.firebaseapp.com",
@@ -19,7 +20,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth()
 export const db = getFirestore(app);
 export const storage = getStorage();

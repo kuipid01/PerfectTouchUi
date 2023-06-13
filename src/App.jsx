@@ -1,20 +1,37 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './App.css'
-import About from './components/About/About'
-import Contact from './components/Contact/Contact'
-import Education from './components/Education/Education'
-import Expertise from './components/Expertise/Expertise'
-import Offer from './components/Offer/Offer'
-import Recent from './components/Recent/Recent'
-import Home from './pages/Home/Home'
+import Navbar from './components/Navbar'
+import LandingPage from './components/LandingPage'
 
+
+import IntroPage from './components/IntroPage'
+import EventsGallery from './components/EventsGallery'
+import Footer from './components/Footer'
+import StudentForm from './components/StudentForm'
+import AppointmentFormContextProvider from './contexts/AppointmentForm'
+import Login from './components/Login'
+import Services from './components/Services'
+import Locations from './components/Locations'
 function App() {
-
-
   return (
-    <div className="App">
-      
+ 
+
+    <div className="relative  ">
+     
+           <AppointmentFormContextProvider>
+        <Navbar/>
+        {/* <Login/> */}
+    
+  
+        <LandingPage/>
+        <IntroPage/>
+        {/* <EventsGallery/> */}
+        <Services/>
+        <Locations/>
+        <Footer/>
+        </AppointmentFormContextProvider>
     </div>
+   
   )
 }
 
